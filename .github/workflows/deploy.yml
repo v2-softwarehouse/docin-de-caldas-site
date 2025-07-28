@@ -1,0 +1,33 @@
+name: Firebase Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Criar arquivo de credenciais
+        run: |
+          echo "${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}" > "${HOME}/gcloud.json"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=${HOME}/gcloud.json" >> $GITHUB_ENV
+
+      - name: Deploy para Firebase
+        env:
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
+        run: |
+          echo "STRIPE_SECRET_KEY=$STRIPE_SECRET_KEY" >> $GITHUB_ENV
+          firebase deploy --only hosting,functions --project docin-de-caldas

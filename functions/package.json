@@ -1,0 +1,16 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "start": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^4.5.0",
+    "stripe": "^12.14.0"
+  },
+  "engines": {
+    "node": "18"
+  }
+}
