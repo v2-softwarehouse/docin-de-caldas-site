@@ -1,0 +1,1 @@
+<template><div>Confirmação de Compra</div></template>

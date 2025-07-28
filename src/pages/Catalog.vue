@@ -1,0 +1,1 @@
+<template><div>Catálogo de Produtos</div></template>

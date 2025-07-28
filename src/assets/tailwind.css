@@ -1,0 +1,10 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilo acessível com alto contraste */
+body {
+  @apply bg-amber-50 text-gray-800;
+  font-family: 'Segoe UI', sans-serif;
+}

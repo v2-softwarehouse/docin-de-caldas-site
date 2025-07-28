@@ -1,0 +1,1 @@
+<template><h1>Bem-vindo ao Docin de Caldas</h1></template>

@@ -1,0 +1,1 @@
+<template><div>Filtro por Categoria</div></template>

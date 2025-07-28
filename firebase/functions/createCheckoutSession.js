@@ -1,0 +1,1 @@
+// Stripe checkout function placeholder

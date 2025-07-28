@@ -1,0 +1,1 @@
+<template><div>Ordenação por Preço</div></template>
