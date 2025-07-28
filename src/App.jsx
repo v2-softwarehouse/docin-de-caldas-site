@@ -1,14 +1,12 @@
+import React from 'react';
 
-import React from 'react'
-import './App.css'
-import logo from './assets/logo-docin-de-caldas.png'
-
-export default function App() {
+function App() {
   return (
-    <main className="app">
-      <img src={logo} alt="Logo Docin de Caldas" className="logo" />
-      <h1>Docin de Caldas</h1>
-      <p>Produtos artesanais da Serra da Mantiqueira</p>
-    </main>
-  )
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif', backgroundColor: '#fefefe' }}>
+      <h1>Bem-vindo à Docin de Caldas 🍬</h1>
+      <p>Seu e-commerce de produtos artesanais da Serra da Mantiqueira.</p>
+    </div>
+  );
 }
+
+export default App;

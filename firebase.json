@@ -1,10 +1,12 @@
 {
   "hosting": {
-    "site": "docin-de-caldas",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
-      { "source": "**", "destination": "/index.html" }
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   },
   "functions": {
