@@ -1,12 +1,27 @@
-import React from 'react';
+import React from 'react'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import Checkout from './pages/Checkout'
+import Catalog from './pages/Catalog'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
-function App() {
+export default function App() {
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif', backgroundColor: '#fefefe' }}>
-      <h1>Bem-vindo à Docin de Caldas 🍬</h1>
-      <p>Seu e-commerce de produtos artesanais da Serra da Mantiqueira.</p>
-    </div>
-  );
+    <BrowserRouter>
+      <nav style={{ display: 'flex', gap: '1rem', padding: '1rem' }}>
+        <Link to="/">Início</Link>
+        <Link to="/catalog">Catálogo</Link>
+        <Link to="/checkout">Checkout</Link>
+<Link to="/cart">Carrinho</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/cart" element={<Cart />} />
+  <Route path="/checkout" element={<Checkout />} />
+</Routes>
+    </BrowserRouter>
+  )
 }
-
-export default App;
